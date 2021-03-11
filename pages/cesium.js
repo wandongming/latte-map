@@ -1,6 +1,6 @@
 import { Viewer, Ion, createWorldTerrain } from 'cesium'
 import { useEffect } from 'react'
-import { ionToken } from './constant/config'
+import { ionToken } from '../constant/config'
 
 export default () => {
   useEffect(() => {
