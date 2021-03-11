@@ -1,32 +1,28 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Map from './map'
 
 export default function Home () {
   return (
-    <div className={styles.container}>
+    <div>
+      <style global jsx>
+        {`
+          *{
+            margin: 0;
+            padding: 0;
+           }
+          html, body{
+            width: 100%;
+            height: 100%;
+          }
+        `}
+      </style>
       <Head>
-        <title>Create Next App</title>
+        <title>Latte Map</title>
         <link rel='icon' href='/favicon.ico' />
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
+        <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href='#'>Latte Map</a>
-        </h1>
-        <Map />
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className={styles.logo} />
-        </a>
-      </footer>
+      <Map />
     </div>
   )
 }
